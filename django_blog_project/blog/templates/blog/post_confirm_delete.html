@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+{% block body %}
+  <div class="content-section">
+    <form action="" method="POST">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <h2>Are you sure you want to delete {{ object.title }}</h2>
+      <div class="form-group">
+        <a href="{% url 'blog:read-detail' object.pk %}" class="btn btn-outline-secondary">No, cancel</a>
+        <button class="btn btn-outline-danger" type="submit">Yes, delete</button>
+      </div>
+    </form>
+  </div>
+{% endblock %}

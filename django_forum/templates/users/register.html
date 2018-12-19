@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block title %}DJango Forum | Register{% endblock %}
+{% block page_class %}class="register-page"{% endblock %}
+{% block content %}
+  <div class="card form-card">
+    <h3 class="card__header">Register for your free account!</h3>
+    <div class="card__body">
+      <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button>Register</button>
+      </form>
+    </div>
+  <p class="card__footer">Already have an accound? Try <a href="{% url 'login' %}">Logging In</a>.</p>
+  </div>
+{% endblock %}

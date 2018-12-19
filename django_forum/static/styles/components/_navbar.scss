@@ -1,0 +1,31 @@
+.navbar {
+  background-color: $color__secondary;
+
+  .navbar-brand {
+    font-size: 2.4rem;
+    color: white;
+  }
+
+  .navbar-collapse {
+
+    .navbar-nav {
+
+      &--left {
+        margin-right: auto;
+      }
+
+      &--right {
+        margin-left: auto;
+      }
+
+      .nav-item {
+
+        .nav-link {
+          font-size: 2.0rem;
+          color: white;
+
+        }
+      }
+    }
+  }
+}

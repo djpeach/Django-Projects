@@ -1,0 +1,28 @@
+/*!
+Theme Name:
+Author URI: http://danielpeach.com/
+Author: Daniel Peach
+Description: A Website for
+Version: 1.0.0
+License: GNU General Public License v2 or later
+Text Domain:
+*/
+
+// ================ ABSTRACTS ================ //
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+// =================== BASE ================== //
+@import "base/base";
+@import "base/typography";
+
+// ================= VENDORS ================= //
+@import "vendors/bootstrap/bootstrap";
+
+// ================ COMPONENTS =============== //
+@import "components/card";
+@import "components/posts";
+@import "components/navbar";
+
+// ================== PAGES ================== //
+@import "pages/register";

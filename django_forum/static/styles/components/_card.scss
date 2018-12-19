@@ -1,0 +1,101 @@
+.card {
+
+  &:last-child {
+    margin-bottom: 45px;
+  }
+
+  &__header {
+    background-color: $color__quaternary;
+    padding: 15px 10px;
+  }
+
+  &__body {
+    background-color: $color__tertiary;
+    padding: 10px 15px;
+  }
+
+  &__footer {
+    background-color: $color__quaternary;
+    padding: 15px 10px;
+  }
+}
+
+.form-card {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 45px;
+
+  .card__body {
+
+    form {
+      font-size: 1.8rem;
+      color: white;
+
+      ul.errorlist {
+        background-color: #CB4549;
+        color: white;
+        border-radius: 4px;
+        padding: 5px;
+
+        li {
+          list-style: none;
+        }
+      }
+
+      label {
+        display: block;
+
+        &:not(:first-of-type) {
+          margin-top: 15px;
+        }
+      }
+
+      input {
+        padding: 5px;
+        border: 1px solid $color__secondary;
+        border-radius: 4px;
+        font-size: 1.6rem;
+      }
+
+      .helptext {
+        display: block;
+        font-size: 1.4rem;
+        margin: 10px;
+        margin-bottom: 0;
+
+        ul {
+
+          li {
+            list-style: none;
+          }
+        }
+      }
+
+      button {
+        margin-top: 15px;
+        display: block;
+        padding: 5px 10px;
+        border: 2px solid $color__secondary;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1.6rem;
+
+        @include hover {
+          background-color: $color__secondary;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .card__footer {
+    font-size: 1.6rem;
+
+    a {
+      @include link_styles {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+}

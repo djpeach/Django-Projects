@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block title %}DJango Forum | Log Out{% endblock %}
+{% block content %}
+  <h5 class="logout-message">You've been logged out. Check out the <a href="{% url 'forum-home' %}">forum</a>, try <a href="{% url 'login' %}">logging in</a>, or <a href="{% url 'register' %}">register</a> for a new free account.</h5>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}DJango Forum | Log In{% endblock %}
+{% block content %}
+  <div class="card form-card">
+    <h3 class="card__header">Log In to your account</h3>
+    <div class="card__body">
+      <form method="POST">
+        {% csrf_token %}
+        {{ form }}
+        <button>Log In</button>
+      </form>
+    </div>
+    <p class="card__footer">Don't have a free account yet? Try <a href="{% url 'register' %}">Registering for one</a>.</p>
+  </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+// ================== COLORS ================= //
+
+$color__primary: #212529;
+$color__secondary: #495057;
+$color__tertiary: #6c757d;
+$color__quaternary: #adb5bd;
+
+$color__link--default: #317EF7;
+
+// ================ BREAKPOINTS ============== //
+
+$breakpoints: (
+  xs: 320px,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1224px,
+  xl2: 1424px,
+  xl3: 1824px
+);
