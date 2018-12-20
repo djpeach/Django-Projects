@@ -29,6 +29,11 @@ class Book(models.Model):
     def get_absolute_url(self):
         return reverse('catalog:book-detail', args=[str(self.id)])
 
+    def display_genre(self):
+        return ', '.join(genre.name for genre in self.genre.all()[:3])
+
+    display_genre.short_description = 'Genre'
+
 class BookInstance(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, help_text='Unique ID for this particular book across whole library')
     book = models.ForeignKey(Book, on_delete=models.SET_NULL, null=True)
@@ -49,6 +54,11 @@ class BookInstance(models.Model):
 
     def __str__(self):
         return f'{self.id} ({self.book.title})'
+
+    def display_book_title(self):
+        return f'{self.book.title}'
+
+    display_book_title.short_description = 'Title'
 
 
 class Author(models.Model):
