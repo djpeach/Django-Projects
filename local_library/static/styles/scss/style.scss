@@ -1,0 +1,27 @@
+/*
+    Theme Name:
+    Theme URI:
+    Author:
+    Author URI:
+    Description:
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: http://www.gnu.org/licenses/gpl-2.0.html
+    Text Domain:
+    Tags:
+*/
+
+// ================ ABSTRACTS ================ //
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+// =================== BASE ================== //
+@import "base/base";
+@import "base/typography";
+
+// ================= VENDORS ================= //
+@import "vendors/bootstrap/bootstrap";
+
+// ================ COMPONENTS =============== //
+
+// ================== PAGES ================== //

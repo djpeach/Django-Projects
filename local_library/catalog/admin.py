@@ -25,8 +25,7 @@ class AuthorAdmin(admin.ModelAdmin):
 
 class BookInstanceInlines(admin.TabularInline):
     model = models.BookInstance
-    extra = 0
-    readonly_fields = ['id']
+    extra = 1
 
 
 @admin.register(models.Book)

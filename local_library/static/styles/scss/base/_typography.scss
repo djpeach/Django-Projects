@@ -1,0 +1,38 @@
+// ================== BASE =================== //
+
+// Set font family for everything except for font-awesome icons
+:not(.fa),
+:not(.far),
+:not(.fas) {
+  font-family: "Lato", sans-serif;
+}
+
+h1, .h1 {
+  font-size: 4rem;
+}
+
+h2, .h2 {
+  font-size: 3.5rem;
+}
+
+h3, .h3 {
+  font-size: 3rem;
+}
+
+h4, .h4 {
+  font-size: 2.5rem;
+}
+
+h5, .h5 {
+  font-size: 2rem;
+}
+
+h6, .h6 {
+  font-size: 1.5rem;
+}
+
+%Secondary-Font {
+  //font-family: "{Secondary Font Family}", serif;
+}
+
+// =============== COMPONENTS ================ //
