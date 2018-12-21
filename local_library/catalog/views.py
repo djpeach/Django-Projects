@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.views import generic
 from . import models
+
 
 def index(req):
     hm_books = models.Book.objects.all().count()
@@ -17,3 +19,25 @@ def index(req):
     }
 
     return render(req, 'index.html', context=context)
+
+
+class BookListView(generic.ListView):
+    model = models.Book
+    extra_context = {
+        'model_object': 'book',
+    }
+
+
+class BookDetailView(generic.DetailView):
+    model = models.Book
+
+
+class AuthorListView(generic.ListView):
+    model = models.Author
+    extra_context = {
+        'model_object': 'author',
+    }
+
+
+class AuthorDetailView(generic.DetailView):
+    model = models.Author

@@ -27,7 +27,7 @@ class Book(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('catalog:book-detail', args=[str(self.id)])
+        return reverse('catalog:book-detail-view', args=[str(self.id)])
 
     def display_genre(self):
         return ', '.join(genre.name for genre in self.genre.all()[:3])
@@ -71,7 +71,7 @@ class Author(models.Model):
         ordering = ['last_name', 'first_name']
 
     def get_absolute_url(self):
-        return reverse('catalog:author-detail', args=[str(self.id)])
+        return reverse('catalog:author-detail-view', args=[str(self.id)])
 
     def __str__(self):
         return f'{self.last_name}, {self.first_name}'

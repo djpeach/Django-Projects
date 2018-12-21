@@ -15,9 +15,9 @@
       <div class="col-sm-2">
       {% block sidebar %}
         <ul class="sidebar-nav">
-          <li><a href="{% url 'index' %}">Home</a></li>
-          <li><a>All books</a></li>
-          <li><a>All authors</a></li>
+          <li><a href="{% url 'catalog:index' %}">Home</a></li>
+          <li><a href="{% url 'catalog:book-list-view' %}">All books</a></li>
+          <li><a href="{% url 'catalog:author-list-view' %}">All authors</a></li>
         </ul>
      {% endblock %}
       </div>

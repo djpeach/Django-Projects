@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block title %}
+  <title>Local Library | All {{ model_object|capfirst }}s</title>
+{% endblock %}
+
+{% block content %}
+  <h1>A list of all our {{ model_object }}s</h1>
+  <p>Take a look through all the {{ model_object }}s we have here at Local Library</p>
+  <h2>Books:</h2>
+  <p>We currently have {{ author_list.count }} {{ model_object }}s:</p>
+  <ul>
+    {% for author in author_list %}
+      <li><a href="{{ author.get_absolute_url }}">{{ author.last_name }}, {{ author.first_name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
